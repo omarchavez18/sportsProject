@@ -1,7 +1,127 @@
+@font-face {
+  font-family: "font1";
+  src: url("./fonts/font1.ttf");
+}
+@font-face {
+  font-family: "font2";
+  src: url("./fonts/font2.ttf");
+}
+h1,
+h2 {
+  font-family: "font1";
+}
 body {
-  background-color: rgb(22, 67, 5);
+  background-image: url(./images/surf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "font2";
+}
+.taskbar {
+  background-color: aqua;
+  margin-bottom: 5rem;
+  border-radius: 0.4rem;
+}
+.ulTaskbar {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  height: 4rem;
+  align-items: center;
+}
+.ulTaskbar > li {
+  border: 0.1rem black solid;
+  width: 6rem;
+  border-radius: 0.2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.surfImage {
-  width: 15rem;
+.mainSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 60px;
+  background: linear-gradient(145deg, #0073ad, #0089cdb4);
+  box-shadow: 41px 10px 39px #003f5e, -1px 1px 68px #00c1ff;
+  width: 60%;
+  margin: auto;
+}
+
+.divTitle {
+  border: 0.5rem black double;
+  border-radius: 50%;
+  width: 45%;
+  height: 6rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  background-color: white;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  box-shadow: black 8px 8px 17px;
+}
+
+.divTitle > img {
+  width: 5rem;
+}
+
+.resume,
+.hours,
+.location {
+  border: 0.5rem black double;
+  border-radius: 2rem;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: inherit;
+  box-shadow: black 8px 8px 17px;
+  line-height: 1.5rem;
+  margin-bottom: 5rem;
+}
+.hours {
+  background-image: url(./images/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hours > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hours > div > img {
+  width: 8%;
+  height: 8%;
+}
+.hours > ul {
+  padding: 0;
+  text-align: left;
+}
+
+.ulLiHours {
+  list-style: none;
+}
+
+.footer {
+  border-radius: 4rem;
+  width: 95%;
+  height: 5rem;
+  margin: 5rem auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8f4a2dad;
+  border: 1px black double;
 }
