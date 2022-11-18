@@ -15,6 +15,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "font2";
+  background-attachment: fixed;
+  background-position: center;
 }
 .taskbar {
   background-color: aqua;
@@ -46,7 +48,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 60px;
-  background: linear-gradient(145deg, #0073ad, #0089cdb4);
+  background: linear-gradient(145deg, #0073add8, #0089cd50);
   box-shadow: 41px 10px 39px #003f5e, -1px 1px 68px #00c1ff;
   width: 60%;
   margin: auto;
@@ -124,4 +126,24 @@ body {
   align-items: center;
   background-color: #8f4a2dad;
   border: 1px black double;
+}
+
+.divSubtitle {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+}
+
+.divSubtitle > div > img {
+  width: 20%;
+}
+
+.divSubtitle > p {
+  padding: 0 1rem;
+}
+
+.surfImage.surfImage {
+  width: 95%;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
 }
