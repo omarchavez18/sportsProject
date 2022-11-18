@@ -115,6 +115,16 @@ body {
 .ulLiHours {
   list-style: none;
 }
+.location > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.location > div > img {
+  width: 8%;
+  height: 8%;
+}
 
 .footer {
   border-radius: 4rem;
@@ -146,4 +156,8 @@ body {
   width: 95%;
   border-radius: 2rem;
   padding-top: 0.5rem;
+}
+
+.contactDiv {
+  background-image: url(./images/wave2.svg);
 }
