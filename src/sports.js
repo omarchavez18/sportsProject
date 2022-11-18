@@ -67,7 +67,7 @@ export function mainSports() {
 
   const divSportsTittle = document.createElement("DIV");
   divSportsTittle.classList.add("divTitle");
-  const sportsTittle = document.createElement("h1");
+  const sportsTittle = document.createElement("h2");
   sportsTittle.innerText = "Store";
   divSportsTittle.appendChild(sportsTittle);
   const icon2 = new Image();
