@@ -1,5 +1,5 @@
 import Icon1 from "./images/surfboard.png";
-
+import Icon5 from "./images/location.gif";
 import Clock from "./images/67-clock-solid.gif";
 
 export function createHome() {
@@ -84,9 +84,14 @@ export function mainHome() {
   //   LOCATION
   const location = document.createElement("DIV");
   location.classList.add("location");
+  const divLocationTittle = document.createElement("div");
   const locationTittle = document.createElement("h2");
   locationTittle.innerText = "Location";
-  location.appendChild(locationTittle);
+  const icon5 = new Image();
+  icon5.src = Icon5;
+  divLocationTittle.appendChild(locationTittle);
+  divLocationTittle.appendChild(icon5);
+  location.appendChild(divLocationTittle);
   const ulLocation = document.createElement("ul");
   const liUlLocation1 = document.createElement("li");
   liUlLocation1.innerText = "18 Aloha Street, Honolulu, Hawaii, EUA.";
