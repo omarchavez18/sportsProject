@@ -2,7 +2,7 @@
 This project is a small web page about a surfboard shop, the purpose of the project is the implementation of webpack. 
 
 To see the aloha Surf webpage click in the next link
-[Aloha Surf](https://omarchavez18.github.io/Portfolio/)
+[Aloha Surf](https://omarchavez18.github.io/sportsProject/)
 
 
 ![Captura de pantalla_20221124_080031](https://user-images.githubusercontent.com/84557440/203886055-78ba0463-460c-49b3-81be-28c0dc602d50.png)
