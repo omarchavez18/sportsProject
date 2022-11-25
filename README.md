@@ -22,7 +22,7 @@ To see the aloha Surf webpage click in the next link
 ## Built With
 
 - HTML
-- CSS -RESPONSIVELY
+- CSS - RESPONSIVELY
 - JAVASCRIPT
 - WEBPACK
 
