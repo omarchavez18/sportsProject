@@ -54,6 +54,19 @@ body {
   margin: auto;
 }
 
+.home,
+.sports,
+.contact {
+  cursor: pointer;
+}
+
+.home:hover,
+.sports:hover,
+.contact:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
 .divTitle {
   border: 0.5rem black double;
   border-radius: 50%;
@@ -68,6 +81,7 @@ body {
   margin-bottom: 4rem;
   margin-top: 1rem;
   box-shadow: black 8px 8px 17px;
+  overflow: hidden;
 }
 
 .divTitle > img {
@@ -92,6 +106,11 @@ body {
   line-height: 1.5rem;
   margin-bottom: 5rem;
 }
+
+.resume > p {
+  padding: 0 0.5rem;
+}
+
 .hours {
   background-image: url(./images/wave.svg);
   background-repeat: no-repeat;
@@ -122,15 +141,15 @@ body {
   gap: 1rem;
 }
 .location > div > img {
-  width: 8%;
-  height: 8%;
+  width: 10%;
+  height: 10%;
 }
 
 .footer {
   border-radius: 4rem;
   width: 95%;
   height: 5rem;
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 1rem auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -160,4 +179,94 @@ body {
 
 .contactDiv {
   background-image: url(./images/wave2.svg);
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    width: 80%;
+  }
+  .divTitle {
+    width: 70%;
+    font-size: 3.5vw;
+  }
+  .divTitle > img {
+    width: 4rem;
+  }
+
+  .divSubtitle > div > img {
+    width: 4rem;
+  }
+  .resume,
+  .hours,
+  .location {
+    width: 80%;
+  }
+  .hours > ul {
+    padding: 0.2rem;
+    text-align: center;
+  }
+  .location > div > img {
+    width: 15%;
+    height: 15%;
+  }
+
+  .location > ul {
+    list-style: none;
+    padding: 0.2rem;
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .taskbar {
+    background-color: transparent;
+  }
+  .ulTaskbar {
+    display: flex;
+    justify-content: none;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0px;
+    height: 8rem;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ulTaskbar > li {
+    width: 90%;
+    background-color: aqua;
+  }
+  .divTitle {
+    width: 80%;
+    font-size: 4.5vw;
+  }
+  .resume,
+  .hours,
+  .location {
+    width: 80%;
+  }
+  .divSubtitle.divSubtitle > div > img {
+    width: 4rem;
+  }
+
+  .hours > div {
+    flex-wrap: wrap;
+  }
+  .hours > div > img {
+    width: 15%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+  }
+
+  .footer > p {
+    margin: 0;
+    padding: 0 1rem;
+  }
 }
