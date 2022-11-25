@@ -2,34 +2,47 @@ import Icon4 from "./images/mail.gif";
 import Kelly from "./images/kelly.webp";
 import John from "./images/john.jpg";
 import Corzo from "./images/corzo.jpg";
+import { content } from "./home";
 
+// information about surfers
 const contacts = [
   {
     image: Kelly,
     name: "Kelly Slatter.",
     phone: "555-27-18-25.",
-    email: "kelly_slater@gmail.com",
+    email: "kslater@gmail.com",
     location: "Honolulu, Hawaii, EUA.",
   },
   {
     image: John,
     name: "John John Florence.",
     phone: "555-27-18-26.",
-    email: "johny_surferFlorence@gmail.com",
+    email: "jf@gmail.com",
     location: "Honolulu, Hawaii, EUA.",
   },
   {
     image: Corzo,
     name: "Jhony Corzo.",
     phone: "477-627-18-27.",
-    email: "Jhonycorzo_pescondido@gmail.com",
+    email: "Jcorzo@gmail.com",
     location: "Puerto Escondido, Oaxaca, México.",
   },
 ];
 
+// mainContact create function
 export function mainContact() {
-  const contactSection = document.createElement("div");
+  const globalMain = document.querySelector("main");
+
+  /* This condition is to compare the existence of a tag and its id and if its id already exists it prevents it from being duplicated, 
+  if the id is different it proceeds to create it*/
+
+  if (globalMain && globalMain.id == "mainContact") {
+    return;
+  }
+
+  const contactSection = document.createElement("main");
   contactSection.classList.add("mainSection");
+  contactSection.id = "mainContact";
 
   const divContactTitle = document.createElement("div");
   divContactTitle.classList.add("divTitle");
@@ -42,10 +55,12 @@ export function mainContact() {
   divContactTitle.appendChild(icon4);
   contactSection.appendChild(divContactTitle);
 
+  //forEach loop to create several "div"
   contacts.forEach((contact) => {
     const contactDiv = document.createElement("div");
     contactDiv.classList.add("hours");
     contactDiv.classList.add("contactDiv");
+
     const divContactImage = document.createElement("div");
     const contactImage = new Image();
     contactImage.src = contact.image;
@@ -71,5 +86,6 @@ export function mainContact() {
 
     contactSection.appendChild(contactDiv);
   });
-  document.body.appendChild(contactSection);
+
+  content.insertBefore(contactSection, document.querySelector("#footer"));
 }

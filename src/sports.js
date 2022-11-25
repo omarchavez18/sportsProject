@@ -1,5 +1,6 @@
 import Icon2 from "./images/shark.gif";
 import Icon3 from "./images/surfboard1.png";
+import { content } from "./home";
 
 import Board1 from "./images/1.webp";
 import Board2 from "./images/2.webp";
@@ -10,6 +11,7 @@ import Board6 from "./images/6.webp";
 import Board7 from "./images/7.webp";
 import Board8 from "./images/8.webp";
 
+// information about surfboards
 const products = [
   {
     image: Board1,
@@ -61,9 +63,19 @@ const products = [
   },
 ];
 
+// mainSports create function
 export function mainSports() {
-  const sportsSection = document.createElement("section");
+  const globalMain = document.querySelector("main");
+
+  /* This condition is to compare the existence of a tag and its id and if its id already exists it prevents it from being duplicated,
+  if the id is different it proceeds to create it*/
+  if (globalMain && globalMain.id == "mainSports") {
+    return;
+  }
+
+  const sportsSection = document.createElement("main");
   sportsSection.classList.add("mainSection");
+  sportsSection.id = "mainSports";
 
   const divSportsTittle = document.createElement("DIV");
   divSportsTittle.classList.add("divTitle");
@@ -87,11 +99,12 @@ export function mainSports() {
   subtitleAndIconDiv.appendChild(icon3);
   const text = document.createElement("p");
   text.innerText =
-    "We have the world’ssss largest and diverse range of surfboard models including Softboards, Shortboards, Hybrids, Mini Mals, Funboards, Longboards and Mid-lengths, our surfboard range caters to all surfing genres, styles and abilities from beginners through to the more experienced surfer. ";
+    "We have the world’s largest and most diverse range of surfboard models including Softboards, Shortboards, Hybrids, Mini Mals, Funboards, Longboards, and Mid-lengths, our surfboard range caters to all surfing genres, styles, and abilities from beginners through to the more experienced surfer. ";
   divSubtitle.appendChild(text);
   divSubtitle.appendChild(subtitleAndIconDiv);
   sportsSection.appendChild(divSubtitle);
 
+  //forEach loop to create several "div´s"
   products.forEach((product) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add("hours");
@@ -116,5 +129,5 @@ export function mainSports() {
     sportsSection.appendChild(productDiv);
   });
 
-  document.body.appendChild(sportsSection);
+  content.insertBefore(sportsSection, document.querySelector("#footer"));
 }
