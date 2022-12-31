@@ -5,7 +5,7 @@ import Clock from "./images/67-clock-solid.gif";
 const content = document.getElementById("content");
 
 // taskbar create function
-export function createHome() {
+export function navigationBar() {
   const header = document.createElement("header");
   header.id = "header";
   const taskbar = document.createElement("DIV");

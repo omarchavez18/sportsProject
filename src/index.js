@@ -1,5 +1,5 @@
 import "./style.css";
-import { createHome, mainHome, footers } from "./home";
+import { navigationBar, mainHome, footers } from "./home";
 import { mainSports } from "./sports";
 import { mainContact } from "./contact";
 
@@ -16,7 +16,7 @@ export function clearContainer(id) {
   content.removeChild(globalMain);
 }
 
-createHome();
+navigationBar();
 mainHome();
 footers();
 
