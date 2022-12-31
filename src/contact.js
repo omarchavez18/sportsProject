@@ -55,7 +55,7 @@ export function mainContact() {
   divContactTitle.appendChild(icon4);
   contactSection.appendChild(divContactTitle);
 
-  //forEach loop to create several "div"
+  // create several "div"
   contacts.forEach((contact) => {
     const contactDiv = document.createElement("div");
     contactDiv.classList.add("hours");
