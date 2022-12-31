@@ -1,7 +1,272 @@
+@font-face {
+  font-family: "font1";
+  src: url("./fonts/font1.ttf");
+}
+@font-face {
+  font-family: "font2";
+  src: url("./fonts/font2.ttf");
+}
+h1,
+h2 {
+  font-family: "font1";
+}
 body {
-  background-color: rgb(22, 67, 5);
+  background-image: url(./images/surf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "font2";
+  background-attachment: fixed;
+  background-position: center;
+}
+.taskbar {
+  background-color: aqua;
+  margin-bottom: 5rem;
+  border-radius: 0.4rem;
+}
+.ulTaskbar {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  height: 4rem;
+  align-items: center;
+}
+.ulTaskbar > li {
+  border: 0.1rem black solid;
+  width: 6rem;
+  border-radius: 0.2rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.surfImage {
-  width: 15rem;
+.mainSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 60px;
+  background: linear-gradient(145deg, #0073add8, #0089cd50);
+  box-shadow: 41px 10px 39px #003f5e, -1px 1px 68px #00c1ff;
+  width: 60%;
+  margin: auto;
+}
+
+.home,
+.sports,
+.contact {
+  cursor: pointer;
+}
+
+.home:hover,
+.sports:hover,
+.contact:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
+.divTitle {
+  border: 0.5rem black double;
+  border-radius: 50%;
+  width: 45%;
+  height: 6rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  background-color: white;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  box-shadow: black 8px 8px 17px;
+  overflow: hidden;
+}
+
+.divTitle > img {
+  width: 5rem;
+}
+
+.resume,
+.hours,
+.location {
+  border: 0.5rem black double;
+  border-radius: 2rem;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: inherit;
+  box-shadow: black 8px 8px 17px;
+  line-height: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.resume > p {
+  padding: 0 0.5rem;
+}
+
+.hours {
+  background-image: url(./images/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hours > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hours > div > img {
+  width: 8%;
+  height: 8%;
+}
+.hours > ul {
+  padding: 0;
+  text-align: left;
+}
+
+.ulLiHours {
+  list-style: none;
+}
+.location > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.location > div > img {
+  width: 10%;
+  height: 10%;
+}
+
+.footer {
+  border-radius: 4rem;
+  width: 95%;
+  height: 5rem;
+  margin: 5rem auto 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8f4a2dad;
+  border: 1px black double;
+}
+
+.divSubtitle {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+}
+
+.divSubtitle > div > img {
+  width: 20%;
+}
+
+.divSubtitle > p {
+  padding: 0 1rem;
+}
+
+.surfImage.surfImage {
+  width: 95%;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
+}
+
+.contactDiv {
+  background-image: url(./images/wave2.svg);
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    width: 80%;
+  }
+  .divTitle {
+    width: 70%;
+    font-size: 3.5vw;
+  }
+  .divTitle > img {
+    width: 4rem;
+  }
+
+  .divSubtitle > div > img {
+    width: 4rem;
+  }
+  .resume,
+  .hours,
+  .location {
+    width: 80%;
+  }
+  .hours > ul {
+    padding: 0.2rem;
+    text-align: center;
+  }
+  .location > div > img {
+    width: 15%;
+    height: 15%;
+  }
+
+  .location > ul {
+    list-style: none;
+    padding: 0.2rem;
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .taskbar {
+    background-color: transparent;
+  }
+  .ulTaskbar {
+    display: flex;
+    justify-content: none;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0px;
+    height: 8rem;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ulTaskbar > li {
+    width: 90%;
+    background-color: aqua;
+  }
+  .divTitle {
+    width: 80%;
+    font-size: 4.5vw;
+  }
+  .resume,
+  .hours,
+  .location {
+    width: 80%;
+  }
+  .divSubtitle.divSubtitle > div > img {
+    width: 4rem;
+  }
+
+  .hours > div {
+    flex-wrap: wrap;
+  }
+  .hours > div > img {
+    width: 15%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+  }
+
+  .footer > p {
+    margin: 0;
+    padding: 0 1rem;
+  }
 }
